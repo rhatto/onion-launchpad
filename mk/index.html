@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Default Service Name</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="onion-location" content="https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234.onion">
+    <meta http-equiv="onion-location" content="https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz2345.onion">
     <script src="../main.js?h=8d0955fd"></script>
     <link rel="stylesheet" href="../fonts.css?h=dc7b7e35">
     <link rel="icon" href="../favicon-default-32.png?h=0a962e55">
@@ -24,7 +24,7 @@
      }
      a {
        text-decoration: none;
-       color: #FF0000ff;;
+       color: #CF5C00ff;;
      }
      p {
        font-size: 18px;
@@ -35,7 +35,7 @@
        padding: 0 2%;
      }
      #site-header {
-       background-color: #FF000013;;
+       background-color: #CF5C0013;;
        padding: 0;
      }
      #nav-list, #nav-list-mobile {
@@ -67,7 +67,7 @@
      .shape::before {
        border-radius: 100%;
        position: absolute;
-       background: #FF000013;;
+       background: #CF5C0013;;
        right: -200px;
        left: -200px;
        top: -200px;
@@ -80,7 +80,7 @@
        margin-bottom: 6%;
      }
      #header-container {
-       background-color: #FF000013;;
+       background-color: #CF5C0013;;
        margin: 0;
        padding-left: 10%;
        padding-right: 8%;
@@ -119,14 +119,14 @@
        width: 50%;
      }
      .onion-url-container {
-       background-color: #3377FF1a;;
+       background-color: #EA69031a;;
        display: inline-block;
        padding: 1%;
        border-radius: 10px;
        padding-right: 8px;
      }
      .onion-url-container:hover {
-       background-color: #3377FF40;;
+       background-color: #EA690340;;
 
        /* The .button:hover rule underlines the whitespace in the url container, we don't want that */
        text-decoration: none !important;
@@ -135,17 +135,17 @@
        text-decoration: underline;
      }
      .onion-url-container:active {
-       background-color: #3377FF66;;
+       background-color: #EA690366;;
      }
      .onion-url-container p {
-       color: #FF0000ff;;
+       color: #CF5C00ff;;
        display: inline;
      }
      .button {
-       background-color: #3377FFff;;
+       background-color: #EA6903ff;;
        padding: 0 24px 16px 24px;
        border-radius: 100px;
-       box-shadow: 2px 4px #3377FF33;;
+       box-shadow: 2px 4px #EA690333;;
        font-family: NotoSansSemibold;
        height: 40px;
        width: max-content;
@@ -153,10 +153,10 @@
        display: inline-block;
      }
      .button:hover {
-       background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #3377FFff;;
+       background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #EA6903ff;;
      }
      .button:active {
-       background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #3377FFff;;
+       background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #EA6903ff;;
      }
      .button a {
        color: white;
@@ -183,7 +183,7 @@
      }
      .onion-url-lock {
        transform: translateY(4px);
-       filter: invert(11%) sepia(89%) saturate(7500%) hue-rotate(7deg) brightness(108%) contrast(111%);
+       filter: invert(43%) sepia(32%) saturate(2310%) hue-rotate(14deg) brightness(98%) contrast(98%);
        display: inline-block;
        background-image: url(../onion-site-lock.svg?h=b66d07d8);
        width: 32px;
@@ -199,7 +199,7 @@
        padding-bottom: 5%;
      }
      .chevron-down {
-       background-image: url(../chevron-down-solid.svg?h=d94c7f5b);
+       background-image: url(../chevron-down-solid.svg?h=0eb05d49);
        width: 20px;
        height: 20px;
        background-repeat: no-repeat;
@@ -280,7 +280,7 @@
        width: 275px;
        height: 275px;
        position: absolute;
-       background-color: #FF77001a;;
+       background-color: #EA69031a;;
        z-index: -1;
        border-radius: 100%;
      }
@@ -317,7 +317,7 @@
        padding-top: 20px;
      }
      .dropdown-item:hover {
-       background-color: #FF770040;;
+       background-color: #EA690340;;
      }
 
      /* tablet */
@@ -350,7 +350,7 @@
          margin-top: 0;
          padding: 3% 0 3% 0 !important;
          justify-content: space-around;
-         background-color: #FF770026;;
+         background-color: #EA690326;;
          display: block;
        }
        #nav-list > li, #nav-list-mobile > li  {
@@ -379,7 +379,7 @@
            padding-top: 15px;
        }
        #nav-list li a, #nav-list-mobile li a {
-         color: #FF0000ff;;
+         color: #CF5C00ff;;
          font-weight: bolder;
        }
        h1 {
@@ -549,6 +549,8 @@
      }
      #language-select i.chevron-down {
        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(258deg) brightness(104%) contrast(102%);
+       width: 19px;
+       margin-right: 2px;
      }
      #language-dropdown {
        background-color: white;
@@ -613,6 +615,16 @@
      .onion-url-mobile .onion-url-span-copied {
        display: none;
        margin-top: 7px;
+     }
+
+     .consent-banner {
+       display: none;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       padding: 1em;
+       position: fixed;
+       background-color: #EA6903ff;;
      }
     </style>
     
@@ -792,15 +804,15 @@
 Оваа веб страна ви објаснува детално како можете да ја заобиколите цензурата.</p>
 
             </div>
-            <div class="onion-url"><a href="https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234.onion" class="onion-url-desktop onion-url-container" data-urlbg="#3377FFff">
+            <div class="onion-url"><a href="https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz2345.onion" class="onion-url-desktop onion-url-container" data-urlbg="#EA6903ff">
     <i class="onion-url-lock"></i>
-    <span class="onion-url-span">https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234.onion</span>
+    <span class="onion-url-span">https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz2345.onion</span>
     <span class="onion-url-span-uncopied">Копирајте ја onion адресата</span>
     <span class="onion-url-span-copied">Копиран!</span>
   </a>
-  <a href="https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234.onion" class="onion-url-mobile onion-url-container" data-urlbg="#3377FFff">
+  <a href="https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz2345.onion" class="onion-url-mobile onion-url-container" data-urlbg="#EA6903ff">
     <i class="onion-url-lock"></i>
-    <span class="onion-url-span">Посетете ја [Service Name] .onion веб страната</span>
+    <span class="onion-url-span">Посетете ја Default Service Name .onion веб страната</span>
     <span class="onion-url-span-uncopied">Копирајте ја onion адресата</span>
     <span class="onion-url-span-copied">Копиран!</span>
   </a>
@@ -935,15 +947,15 @@ Onion веб адресата е линија од 56 најчесто случ�
 <p>За пристап на Default Service Name onion услугата, едноставно копирајте ja и залепете ја следнава URL адреса во Tor Browser:</p>
 
     
-      <div class="onion-url"><a href="https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234.onion" class="onion-url-desktop onion-url-container" data-urlbg="#3377FFff">
+      <div class="onion-url"><a href="https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz2345.onion" class="onion-url-desktop onion-url-container" data-urlbg="#EA6903ff">
     <i class="onion-url-lock"></i>
-    <span class="onion-url-span">https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234.onion</span>
+    <span class="onion-url-span">https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz2345.onion</span>
     <span class="onion-url-span-uncopied">Копирајте ја onion адресата</span>
     <span class="onion-url-span-copied">Копиран!</span>
   </a>
-  <a href="https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234.onion" class="onion-url-mobile onion-url-container" data-urlbg="#3377FFff">
+  <a href="https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz2345.onion" class="onion-url-mobile onion-url-container" data-urlbg="#EA6903ff">
     <i class="onion-url-lock"></i>
-    <span class="onion-url-span">Посетете ја [Service Name] .onion веб страната</span>
+    <span class="onion-url-span">Посетете ја Default Service Name .onion веб страната</span>
     <span class="onion-url-span-uncopied">Копирајте ја onion адресата</span>
     <span class="onion-url-span-copied">Копиран!</span>
   </a>
@@ -965,19 +977,21 @@ Onion веб адресата е линија од 56 најчесто случ�
     <p>Ако ви е потребна поддршка со било што поврзано со Tor, може да пристапите на каналот за поддршка на Tor на Telegram. Исто така постои и наменет активен форум каде секој може да постави прашање, да врати порака за искуство од користење или да изрази некоја своја загриженост.</p>
     <div id="social-button-container">
       <div class="social-button">
-        <a href="https://t.me/TorProjectSupportBot" class="button"><img src="../telegram-brands.svg?h=b412deed" class="rtl-hide">Telegram: @TorProjectSupportBot<img src="../telegram-brands.svg?h=b412deed" class="rtl-show"></a>
+        <a href="https://t.me/TorProjectSupportBot" class="button"><img src="../telegram-brands.svg?h=fb54983f" class="rtl-hide">Telegram: @TorProjectSupportBot<img src="../telegram-brands.svg?h=fb54983f" class="rtl-show"></a>
       </div>
       <div class="social-button">
         <a href="https://signal.me/#p/+17787431312" class="button"><img src="../signal.svg?h=e6cdd02a" class="rtl-hide">Signal: +1 778-743-1312<img src="../signal.svg?h=e6cdd02a" class="rtl-show"></a>
       </div>
       </div>
       <div class="social-button">
-        <a href="https://forum.torproject.net/" class="button"><img src="../discourse-brands.svg?h=406319ef" class="rtl-hide">Tor Project форум<img src="../discourse-brands.svg?h=406319ef" class="rtl-show"></a>
+        <a href="https://forum.torproject.net/" class="button"><img src="../discourse-brands.svg?h=3587ce10" class="rtl-hide">Tor Project форум<img src="../discourse-brands.svg?h=3587ce10" class="rtl-show"></a>
       </div>
       <div class="social-button">
         <a href="mailto:frontdesk@torproject.org" class="button"><img src="../mail.svg?h=63bb0054" class="rtl-hide">frontdesk@torproject.org<img src="../mail.svg?h=63bb0054" class="rtl-show"></a>
       </div>
     </div>
 </footer>
+
+    
   </body>
 </html>
