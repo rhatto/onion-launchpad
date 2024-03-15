@@ -183,7 +183,7 @@
      }
      .onion-url-lock {
        transform: translateY(4px);
-       filter: invert(38%) sepia(65%) saturate(7500%) hue-rotate(29deg) brightness(102%) contrast(102%);
+       filter: invert(38%) sepia(65%) saturate(7492%) hue-rotate(28deg) brightness(102%) contrast(99%);
        display: inline-block;
        background-image: url(../onion-site-lock.svg?h=b66d07d8);
        width: 32px;
@@ -253,8 +253,11 @@
      #footer-container {
        margin: 0 auto;
        text-align: center;
-       width: 36vw;
        max-width: 1200px;
+     }
+     #footer-container p {
+       width: 36vw;
+       margin: auto;
      }
      #steps-container > div.parent:nth-child(2n) {
        flex-direction: row-reverse;
@@ -538,9 +541,14 @@
        background-size: contain;
        display: inline-block;
      }
+
      #social-button-container {
-       display: flex;
        justify-content: space-around;
+       margin-top: 40px;
+     }
+
+     #social-button-container div a {
+       margin: 10px;
      }
 
      #language-select {
@@ -624,7 +632,28 @@
        bottom: 0;
        padding: 1em;
        position: fixed;
-       background-color: #EA6903ff;;
+       background-color: #FCEDE1ff;;
+       margin: 2% auto;
+       width: 92vw;
+       border-radius: 13px;
+     }
+
+     .consent-banner a p {
+       margin-top: 15px;
+     }
+
+     .consent-buttons {
+       float: right;
+     }
+
+     #consent-ok {
+       margin-right: 20px;
+     }
+
+     #consent-cancel {
+       background-color: inherit;
+       box-shadow: inherit;
+       color: #CF5C00ff;;
      }
     </style>
     
@@ -836,7 +865,7 @@
   <div class="child step-text">
     <h2>Крок 1: Завантажте оглядач Tor</h2>
     <p>Найбезпечніший та найшвидший шлях завантажити оглядач Tor — з офіційного сайту проєкту Tor.
-<span id="os-span">Для вашої операційної системи</span> ви можете завантажити <span id="browser-span">Оглядач Tor</span> за посиланням нижче:</p>
+<span id="os-span">Для вашої операційної системи</span> ви можете завантажити <span id="browser-span">Браузер Tor</span> за посиланням нижче:</p>
 
     
       <div id="download-tor-button">
@@ -889,7 +918,7 @@ GetTor — це сервіс, який автоматично відповіда
 <p>Під час першого запуску оглядача Tor ви побачите вікно зі заголовком Під'єднатися до Tor.
 Це дає вам можливість або під'єднатися безпосередньо до мережі Tor, або налаштувати оглядач Tor для вашого з'єднання.
 Перед вами буде пункт з питанням, чи ви завжди хочете автоматично під'єднуватись до мережі Tor, та, якщо це так, позначте його.</p>
-<p>Ви зможете розпочати перегляд вебсторінок у Tor Browser одразу після запуску програми та натискання кнопки «Під'єднатись», якщо ви використовуєте його вперше.</p>
+<p>Ви зможете розпочати перегляд вебсторінок у браузері Tor одразу після запуску програми та натискання кнопки «Під'єднатись», якщо ви використовуєте його вперше.</p>
 
     
     
@@ -901,35 +930,33 @@ GetTor — це сервіс, який автоматично відповіда
 За подібних обставин має вистачити простого налаштування вашого оглядача для під'єднання через міст.
 Мости — це ретранслятори, що є приватними та які важче заблокувати.</p>
 <h3>Інструкції щодо активації мостів для комп'ютера:</h3>
-<ul>
-<li>Ви можете використовувати мости в оглядачі Tor для комп'ютера у: Налаштування &gt; З'єднання &gt; Мости &gt; Вибрати вбудований міст.
-Від 22 грудня 2021 року мости, що вбудовані в оглядачі Tor, блокуються у Росії.</li>
-</ul>
+<p>Ви можете використовувати мости у Браузері Tor для комп'ютера у: Налаштування &gt; З'єднання &gt; Мости &gt; Вибрати вбудований міст.
+Від 22 грудня 2021 року мости, що вбудовані в оглядачі Tor, блокуються у Росії.</p>
 <p>Отже, читачам потрібно робити запит на мости одним з наступних шляхів:</p>
 <ul>
-<li>Попросіть міст з оглядачем Tor для комп'ютера: Налаштування &gt; З'єднання &gt; Мости &gt; Запит на міст від torproject.org &gt; Розв'язати CAPTCHA</li>
-<li>Надішліть «/bridges» у виділений Telegram канал  <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a>  та додайте адреси мостів, копіюючи їх вручну до оглядача Tor: Налаштування &gt; З'єднання &gt; Мости &gt; Введіть адресу моста відомого вам</li>
+<li>Попросіть міст з браузера Tor для комп'ютера: Налаштування &gt; З'єднання &gt; Мости &gt; Запит на міст від torproject.org &gt; Розв'язати CAPTCHA</li>
+<li>Надішліть «/bridges» у виділений Telegram канал <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> та додайте адреси мостів, копіюючи їх вручну до оглядача Tor: Налаштування &gt; З'єднання &gt; Мости &gt; Введіть адресу моста відомого вам</li>
 <li>Перейдіть на <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> та виконайте інструкції</li>
-<li>Попросіть міст через електронну пошту: bridges@torproject.org  зі Gmail або Riseup та додайте адреси мостів, копіюючи їх вручну до оглядача Tor: Налаштування &gt; З'єднання &gt; Мости &gt; Введіть адресу моста відомого вам</li>
-<li>Під'єднайтеся через «Snowflake» з оглядача Tor: Налаштування &gt; З'єднання &gt; Мости &gt; Обрати вбудований міст &gt; Snowflake</li>
+<li>Попросіть міст через електронну пошту: bridges@torproject.org зі Gmail або Riseup та додайте адреси мостів, копіюючи їх вручну до оглядача Tor: Налаштування &gt; З'єднання &gt; Мости &gt; Введіть адресу моста відомого вам</li>
+<li>Під'єднайтеся через Snowflake з браузера Tor: Налаштування &gt; З'єднання &gt; Мости &gt; Обрати вбудований міст &gt; Snowflake</li>
 </ul>
 <h3>Інструкції щодо активації мостів на Android:</h3>
-<p>Читачі можуть використовувати міст для Android перейшовши до:  піктограма Налаштування &gt; Налаштувати міст &gt; Використати міст.</p>
+<p>Читачі можуть використовувати міст для Android перейшовши до: піктограма Налаштування &gt; Налаштувати міст &gt; Використати міст.</p>
 <p>У випадку, якщо усі вбудовані в оглядач Tor мости заблоковано, читачеві доведеться попросити міст одним з наступних способів:</p>
 <ul>
-<li>Надішліть «/bridges» у виділений Telegram канал l <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a>  та додайте рядки з адресами мостів, копіюючи їх вручну до оглядача Tor: Налаштувати міст &gt; Вказати міст, який я знаю</li>
+<li>Надішліть «/bridges» у виділений Telegram канал <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> і додайте рядки з адресами мостів, копіюючи їх вручну до Браузера Tor: Налаштувати міст &gt; Вказати міст, який я знаю</li>
 <li>Перейдіть на <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> та виконайте інструкції</li>
-<li>Попросіть міст через електронну пошту: bridges@torproject.org зі Gmail або Riseup та додайте рядки з адресами мостів, копіюючи їх вручну до оглядача Browser: Налаштувати міст &gt; Вказати міст, який я знаю</li>
-<li>Під'єднайтеся через «Snowflake» з оглядачем Tor: Налаштувати міст &gt; Snowflake</li>
+<li>Попросіть міст через електронну пошту: bridges@torproject.org з пошти Gmail або Riseup і додайте рядки з адресами мостів, копіюючи їх вручну до Браузера Tor: Налаштувати міст &gt; Вказати міст, який я знаю</li>
+<li>Під'єднайтеся через Snowflake з браузера Tor: Налаштувати міст &gt; Snowflake</li>
 </ul>
 <h3>Інструкції щодо активації мостів для iOS:</h3>
 <p>Читачі можуть використовувати міст для iOS перейшовши до: піктограми Onion під час перегляду вебсайту &gt; Налаштування мосту.</p>
 <p>У випадку, якщо усі вбудовані в оглядачі Tor мости заблоковано, читачеві доведеться попросити міст одним з наступних способів:</p>
 <ul>
-<li>Надішліть «/bridges» у виділений Telegram канал <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a>  та додайте рядки з адресами мостів, копіюючи їх вручну до оглядача Tor: Налаштувати міст &gt; Власні мости</li>
+<li>Надішліть «/bridges» у виділений Telegram канал <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> і додайте рядки з адресами мостів, копіюючи їх вручну до Браузера Tor: Налаштувати міст &gt; Власні мости</li>
 <li>Перейдіть на <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> та виконайте інструкції</li>
-<li>Попросіть міст через електронну пошту: bridges@torproject.org зі Gmail або Riseup та додайте рядки з адресами мостів, копіюючи їх вручну до Tor Browser: Налаштувати міст &gt; Власні мости</li>
-<li>Під'єднайтеся через «Snowflake» з оглядача Tor: Налаштувати міст &gt; Snowflake</li>
+<li>Попросіть міст через електронну пошту: bridges@torproject.org з е-пошти Gmail або Riseup і додайте рядки з адресами мостів, копіюючи їх вручну до Браузера Tor: Налаштувати міст &gt; Власні мости</li>
+<li>Під'єднання через Snowflake з браузера Tor: Налаштувати міст &gt; Snowflake</li>
 </ul>
 
         </div>
@@ -950,7 +977,7 @@ GetTor — це сервіс, який автоматично відповіда
 Як і у випадку з іншими вебсайтами, вам потрібно знати адресу служби onion для під'єднання до неї.
 Адреса onion — це адреса з 56 випадкових букв та цифр з «.onion» у кінці.
 Щоб дізнатись більше про служби Onion, відвідайте <a href="https://tb-manual.torproject.org/onion-services">Посібник оглядача Tor</a>.</p>
-<p>Для доступу до служби onion Default Service Name лише скопіюйте та вставте наступну URL-адресу до оглядача Tor:</p>
+<p>Для доступу до служби onion Default Service Name просто скопіюйте та вставте таку URL-адресу до Браузера Tor:</p>
 
     
       <div class="onion-url"><a href="https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz2345.onion" class="onion-url-desktop onion-url-container" data-urlbg="#EA6903ff">
@@ -985,17 +1012,24 @@ GetTor — це сервіс, який автоматично відповіда
       <div class="social-button">
         <a href="https://t.me/TorProjectSupportBot" class="button"><img src="../telegram-brands.svg?h=fb54983f" class="rtl-hide">Telegram: @TorProjectSupportBot<img src="../telegram-brands.svg?h=fb54983f" class="rtl-show"></a>
       </div>
+
       <div class="social-button">
         <a href="https://signal.me/#p/+17787431312" class="button"><img src="../signal.svg?h=e6cdd02a" class="rtl-hide">Signal: +1 778-743-1312<img src="../signal.svg?h=e6cdd02a" class="rtl-show"></a>
       </div>
-      </div>
+
       <div class="social-button">
         <a href="https://forum.torproject.net/" class="button"><img src="../discourse-brands.svg?h=3587ce10" class="rtl-hide">Форум проєкту Tor<img src="../discourse-brands.svg?h=3587ce10" class="rtl-show"></a>
       </div>
+
       <div class="social-button">
         <a href="mailto:frontdesk@torproject.org" class="button"><img src="../mail.svg?h=63bb0054" class="rtl-hide">frontdesk@torproject.org<img src="../mail.svg?h=63bb0054" class="rtl-show"></a>
       </div>
+
+      <div class="social-button">
+        <a href="https://wa.me/447421000612" class="button"><img src="../whatsapp.svg?h=c7bcbd36" class="rtl-hide">WhatsApp: +44 7421 000612<img src="../whatsapp.svg?h=c7bcbd36" class="rtl-show"></a>
+      </div>
     </div>
+  </div>
 </footer>
 
     

@@ -183,7 +183,7 @@
      }
      .onion-url-lock {
        transform: translateY(4px);
-       filter: invert(38%) sepia(65%) saturate(7500%) hue-rotate(29deg) brightness(102%) contrast(102%);
+       filter: invert(38%) sepia(65%) saturate(7492%) hue-rotate(28deg) brightness(102%) contrast(99%);
        display: inline-block;
        background-image: url(../onion-site-lock.svg?h=b66d07d8);
        width: 32px;
@@ -253,8 +253,11 @@
      #footer-container {
        margin: 0 auto;
        text-align: center;
-       width: 36vw;
        max-width: 1200px;
+     }
+     #footer-container p {
+       width: 36vw;
+       margin: auto;
      }
      #steps-container > div.parent:nth-child(2n) {
        flex-direction: row-reverse;
@@ -538,9 +541,14 @@
        background-size: contain;
        display: inline-block;
      }
+
      #social-button-container {
-       display: flex;
        justify-content: space-around;
+       margin-top: 40px;
+     }
+
+     #social-button-container div a {
+       margin: 10px;
      }
 
      #language-select {
@@ -624,7 +632,28 @@
        bottom: 0;
        padding: 1em;
        position: fixed;
-       background-color: #EA6903ff;;
+       background-color: #FCEDE1ff;;
+       margin: 2% auto;
+       width: 92vw;
+       border-radius: 13px;
+     }
+
+     .consent-banner a p {
+       margin-top: 15px;
+     }
+
+     .consent-buttons {
+       float: right;
+     }
+
+     #consent-ok {
+       margin-right: 20px;
+     }
+
+     #consent-cancel {
+       background-color: inherit;
+       box-shadow: inherit;
+       color: #CF5C00ff;;
      }
     </style>
     
@@ -826,7 +855,7 @@
       <div class="shape"></div>
       <div id="page-content">
         <h2>Շրջանցել ցենզուրան Tor-ի միջոցով</h2>
-        <p>Tor-ը հնարավորություն է ընձեռնում համացանցում անոնիմ կերպով տեղաշարժվելու, օգնելով մարդկանց <strong>խուսափել թե՛ գրաքննությունից, թե՛ գաղտնալսվելուց</strong>։ Tor-ը նման է ցանկացած այլ բրաուզերի, ինչպիսիք են՝ Chrome-ը, Firefox-ը, Safari-ն կամ Yandex-ը, մեկ տարբերությամբ՝ այն թաքցնում է ձեր օնլայն անցուդարձը և համանցից օգտվելու նախասիրությունները կապի օպերատորներից և ցանկացած այլ անձանցից, ովքեր կփորձեն հետևել ձեզ ինտերնետում։  Այն <strong>գաղտնի է պահում ձեր տվյալների հոսքը</strong>, ծածկագրելով և անցկացնելով այն երեք պատահական ընտրված, կամավորների կողմից ղեկավարվող nod-երով (այս nod-երը կոչվում են նաև relay-ներ՝ հաղորդիչներ)։ Տվյալ պրոցեսը խճճում և թաքցնում է ձեր ինքնությունը, գտնվելու վայրը և շարժը (օրինակ՝ ինչ կայքեր եք դուք այցելում)։</p>
+        <p>Tor-ը հնարավորություն է ընձեռնում համացանցում անոնիմ կերպով տեղաշարժվելու, օգնելով մարդկանց <strong>խուսափել թե՛ գրաքննությունից, թե՛ գաղտնալսվելուց</strong>։ Tor-ը նման է ցանկացած այլ բրաուզերի, ինչպիսիք են՝ Chrome-ը, Firefox-ը, Safari-ն կամ Yandex-ը, մեկ տարբերությամբ՝ այն թաքցնում է ձեր օնլայն անցուդարձը և համանցից օգտվելու նախասիրությունները կապի օպերատորներից և ցանկացած այլ անձանցից, ովքեր կփորձեն հետևել ձեզ ինտերնետում։ Այն <strong>գաղտնի է պահում ձեր տվյալների հոսքը</strong>, ծածկագրելով և անցկացնելով այն երեք պատահական ընտրված, կամավորների կողմից ղեկավարվող nod-երով (այս nod-երը կոչվում են նաև relay-ներ՝ հաղորդիչներ)։ Տվյալ պրոցեսը խճճում և թաքցնում է ձեր ինքնությունը, գտնվելու վայրը և շարժը (օրինակ՝ ինչ կայքեր եք դուք այցելում)։</p>
 
         <p>Մարդու իրավունքի պաշտպանները, ակտիվիստները և այլոք, ում անհրաժեշտ է <strong>խուսափել գրաքննությունից կամ գաղտնալսումից</strong>, օգտվում են Tor-ից։ Tor-ի մասին ավելի մանրամասն տեղեկատվություն կգտնեք այստեղ՝ <a href="https://tb-manual.torproject.org">Tor Browser Manual</a>:</p>
 
@@ -889,7 +918,7 @@ GetTor-ը ծառայություն է, որն ավտոմատ կերպով պատ
 <p>Երբ բացեք Tor բրաուզերն առաջին անգամ, կտեսնեք Միանալ Tor-ին պատուհանը։
 Սա հնարավորություն է տալիս կամ ուղիղ կերպով միանալու Tor ցանցին, կամ կարգավորելու Tor բրաուզերը՝ հարմարեցնելով այն ձեր կապի պայմաններին։
 Եթե ցանկանում եք ավտոմատ կերպով միանալ Tor ցանցին, ապա ընտրեք համապատասխան նշատուփը։</p>
-<p>Tor Browser-ի ծրագիրն ակտիվացնելուց, և եթե այն առաջին անգամ եք բացում,  սեղմեք «Միանալ» կոճակը և կարճ ժամանակ անց, արդեն պետք է կարողանաք այն գործածել։</p>
+<p>Tor Browser-ի ծրագիրն ակտիվացնելուց, և եթե այն առաջին անգամ եք բացում, սեղմեք «Միանալ» կոճակը և կարճ ժամանակ անց, արդեն պետք է կարողանաք այն գործածել։</p>
 
     
     
@@ -903,9 +932,9 @@ Tor բրաուզերի մեջ ներառված են սահմանափակումն
 <h3>Կամուրջների ակտիվացման հրահանգներ համակարգչի համար․</h3>
 <p>Կարող եք Tor բրաուզերում կամուրջ գործածել համակարգչի վրա՝ անցնելով Settings &gt; Connection &gt; Bridges &gt; Select a Built-In Bridge։
 2021 թվականի դեկտեմբերի 22-ի դրությամբ Ռուսաստանում արգելվեց կամուրջների ուղղակի ներառումը Tor բրաուզերի փաթեթներում։</p>
-<p>Այդ իսկ պատճառով, կամուրջ կարելի է պահանջել հետևյալ ձևերից մեկով.
-Ստանալ կամուրջ Tor բրաուզերից՝ համակարգչի համար. Settings &gt; Connection &gt; Bridges &gt; Request a bridge from torproject.org &gt; Solve the CAPTCHA</p>
+<p>Այդ իսկ պատճառով, կամուրջ կարելի է պահանջել հետևյալ ձևերից մեկով.</p>
 <ul>
+<li>Ստանալ կամուրջ Tor բրաուզերից՝ համակարգչի համար. Settings &gt; Connection &gt; Bridges &gt; Request a bridge from torproject.org &gt; Solve the CAPTCHA</li>
 <li>Ուղարկել /bridges հրահանգը Telegram-ի հատուկ ալիքին <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a>, այնուհետև ստացված կամրջի տողերը պատճենել և տեղադրել Tor բրաուզերում, անցնելով՝ Settings &gt; Tor &gt; Bridges &gt; Use a bridge &gt; պատճենել կամրճի հասցեն</li>
 <li>Այցելեք <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> և հետևեք հրահանգներին</li>
 <li>Ստանալ կամուրջ Gmail կամ Riseup էլեկտրոնային փոստի միջոցով՝ bridges@torproject.org հասցեից։ Այնուհետև ստացած կամրջի տողերը պատճենել և տեղադրել Tor բրաուզերում. Config Bridge &gt; Պատճենել Կամրջի Հասցեն</li>
@@ -913,21 +942,21 @@ Tor բրաուզերի մեջ ներառված են սահմանափակումն
 </ul>
 <h3>Կամուրջներ ակտիվացնելու մեթոդներ Android-ի համար.</h3>
 <p>Android-ում կարելի է կամուրջ օգտագործել բացելով Կարգավորումներ &gt; Config Bridge &gt; Use a bridge:</p>
-<p>Այն դեպքում, երբ Tor Browser-ին ուղղակիորեն կապված կամուրջներն արգելափակված են, կամուրջ կարելի է պահանջել հետևյալ ձևերից մեկով.
-Telegram-ով ուղարկել /bridges հրահանգը <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> ալիքին։ Այնուհետև ստացած կամրջի տողերը պատճենել և տեղադրել Tor բրաուզերում Config Bridge &gt; Պատճենել Կամրջի Հասցեն</p>
+<p>Այն դեպքում, երբ Tor Browser-ին ուղղակիորեն կապված կամուրջներն արգելափակված են, կամուրջ կարելի է պահանջել հետևյալ ձևերից մեկով.</p>
 <ul>
+<li>Telegram-ով ուղարկել /bridges հրահանգը <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> ալիքին։ Այնուհետև ստացած կամրջի տողերը պատճենել և տեղադրել Tor բրաուզերում Config Bridge &gt; Պատճենել Կամրջի Հասցեն</li>
 <li>Այցելեք <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> և հետևեք հրահանգներին</li>
-<li>Պահանջել կամուրջ Gmail կամ Riseup էլեկտրոնային փոստի միջոցով՝ bridges@torproject.org հասցեից։ Այնուհետև ստացած կամրջի տողերը պատճենել և տեղադրել Tor բրաուզերում. Config Bridge &gt; Պատճենել Կամրջի Հասցեն
-Միացում Snowflake-ին Tor բրաուզերից. Config Bridge &gt; Snowflake</li>
+<li>Պահանջել կամուրջ Gmail կամ Riseup էլեկտրոնային փոստի միջոցով՝ bridges@torproject.org հասցեից։ Այնուհետև ստացած կամրջի տողերը պատճենել և տեղադրել Tor բրաուզերում. Config Bridge &gt; Պատճենել Կամրջի Հասցեն</li>
+<li>Միացում Snowflake-ին Tor բրաուզերից. Config Bridge &gt; Snowflake</li>
 </ul>
 <h3>Կամուրջների ակտիվացնելու մեթոդներ iOS-ի համար.</h3>
 <p>iOS-ում կարելի է կամուրջ օգտագործել սեղմելով Սոխի պատկերակի վրա, այնուհետև գնալով Bridge Configuration։</p>
-<p>Եթե անմիջապես Tor բրաուզերի միջի կամուրջներն արգելափակված են, կարող եք փորձել այն ստանալ հետևյալ ձևերից մեկով.
-Telegram-ով ուղարկել /bridges հրահանգը <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> ալիքին։ Այնուհետև ստացած կամրջի տողերը պատճենել և տեղադրել Tor բրաուզերում Config Bridge &gt; Պատճենել Կամրջի Հասցեն</p>
+<p>Եթե անմիջապես Tor բրաուզերի միջի կամուրջներն արգելափակված են, կարող եք փորձել այն ստանալ հետևյալ ձևերից մեկով.</p>
 <ul>
+<li>Telegram-ով ուղարկել /bridges հրահանգը <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> ալիքին։ Այնուհետև ստացած կամրջի տողերը պատճենել և տեղադրել Tor բրաուզերում Config Bridge &gt; Պատճենել Կամրջի Հասցեն</li>
 <li>Այցելեք <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> և հետևեք հրահանգներին</li>
-<li>Պահանջել կամուրջ Gmail կամ Riseup էլեկտրոնային փոստի միջոցով՝ bridges@torproject.org հասցեից։ Այնուհետև ստացած կամրջի տողերը պատճենել և տեղադրել Tor բրաուզերում. Bridge Configuration &gt; Պատճենել Կամրջի Հասցեն
-Միացում Snowflake-ին Tor Browser-ից. Bridge Configuration &gt; Snowflake</li>
+<li>Պահանջել կամուրջ Gmail կամ Riseup էլեկտրոնային փոստի միջոցով՝ bridges@torproject.org հասցեից։ Այնուհետև ստացած կամրջի տողերը պատճենել և տեղադրել Tor բրաուզերում. Bridge Configuration &gt; Պատճենել Կամրջի Հասցեն</li>
+<li>Միացում Snowflake-ին Tor Browser-ից. Bridge Configuration &gt; Snowflake</li>
 </ul>
 
         </div>
@@ -983,17 +1012,24 @@ Onion ծառայությունների մասին ավելին իմանալու 
       <div class="social-button">
         <a href="https://t.me/TorProjectSupportBot" class="button"><img src="../telegram-brands.svg?h=fb54983f" class="rtl-hide">Telegram: @TorProjectSupportBot<img src="../telegram-brands.svg?h=fb54983f" class="rtl-show"></a>
       </div>
+
       <div class="social-button">
         <a href="https://signal.me/#p/+17787431312" class="button"><img src="../signal.svg?h=e6cdd02a" class="rtl-hide">Signal: +1 778-743-1312<img src="../signal.svg?h=e6cdd02a" class="rtl-show"></a>
       </div>
-      </div>
+
       <div class="social-button">
         <a href="https://forum.torproject.net/" class="button"><img src="../discourse-brands.svg?h=3587ce10" class="rtl-hide">Tor Project-ի ֆորում<img src="../discourse-brands.svg?h=3587ce10" class="rtl-show"></a>
       </div>
+
       <div class="social-button">
         <a href="mailto:frontdesk@torproject.org" class="button"><img src="../mail.svg?h=63bb0054" class="rtl-hide">frontdesk@torproject.org<img src="../mail.svg?h=63bb0054" class="rtl-show"></a>
       </div>
+
+      <div class="social-button">
+        <a href="https://wa.me/447421000612" class="button"><img src="../whatsapp.svg?h=c7bcbd36" class="rtl-hide">WhatsApp: +44 7421 000612<img src="../whatsapp.svg?h=c7bcbd36" class="rtl-show"></a>
+      </div>
     </div>
+  </div>
 </footer>
 
     

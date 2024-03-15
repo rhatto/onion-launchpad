@@ -183,7 +183,7 @@
      }
      .onion-url-lock {
        transform: translateY(4px);
-       filter: invert(38%) sepia(65%) saturate(7500%) hue-rotate(29deg) brightness(102%) contrast(102%);
+       filter: invert(38%) sepia(65%) saturate(7492%) hue-rotate(28deg) brightness(102%) contrast(99%);
        display: inline-block;
        background-image: url(../onion-site-lock.svg?h=b66d07d8);
        width: 32px;
@@ -253,8 +253,11 @@
      #footer-container {
        margin: 0 auto;
        text-align: center;
-       width: 36vw;
        max-width: 1200px;
+     }
+     #footer-container p {
+       width: 36vw;
+       margin: auto;
      }
      #steps-container > div.parent:nth-child(2n) {
        flex-direction: row-reverse;
@@ -538,9 +541,14 @@
        background-size: contain;
        display: inline-block;
      }
+
      #social-button-container {
-       display: flex;
        justify-content: space-around;
+       margin-top: 40px;
+     }
+
+     #social-button-container div a {
+       margin: 10px;
      }
 
      #language-select {
@@ -624,7 +632,28 @@
        bottom: 0;
        padding: 1em;
        position: fixed;
-       background-color: #EA6903ff;;
+       background-color: #FCEDE1ff;;
+       margin: 2% auto;
+       width: 92vw;
+       border-radius: 13px;
+     }
+
+     .consent-banner a p {
+       margin-top: 15px;
+     }
+
+     .consent-buttons {
+       float: right;
+     }
+
+     #consent-ok {
+       margin-right: 20px;
+     }
+
+     #consent-cancel {
+       background-color: inherit;
+       box-shadow: inherit;
+       color: #CF5C00ff;;
      }
     </style>
     
@@ -828,7 +857,7 @@
         <h2>利用 Tor 规避审查制度</h2>
         <p>Tor 提供了一种匿名浏览互联网的方式，帮助人们<strong>规避审查和监视</strong>。Tor 浏览器就像您使用的任何其他浏览器--Chrome，Firefox，Safari，Yandex--只是它不会将你的所有浏览行为暴露给您的互联网服务提供商和其他窥探你流量的人，而是通过加密您的流量并让它通过三个随机的志愿者运行的节点（这些节点也被称为 "中继"）来<strong>隐藏您的流量</strong>。这个过程混淆了您是谁，您在哪里，以及您要去哪里（即您正在访问的网站）。</p>
 
-        <p>世界各地的人权捍卫者、活动家和需要<strong>规避审查和监视</strong>的人都在使用 Tor。要了解更多关于 Tor 以及它如何运行的信息，请访问 [Tor 浏览器手册]（<a href="https://tb-manual.torproject.org）。">https://tb-manual.torproject.org）。</a></p>
+        <p>世界各地的人权捍卫者、活动家和需要<strong>规避审查和监视</strong>的人都在使用 Tor。要了解更多关于 Tor 以及它如何运行的信息，请访问 <a href="https://tb-manual.torproject.org">Tor 浏览器手册</a>。</p>
 
       </div>
       <div id="steps-container">
@@ -836,7 +865,7 @@
   <div class="child step-text">
     <h2>步骤 1：下载 Tor 浏览器</h2>
     <p>要获取 Tor 浏览器，最安全且简便的方式就是从 Tor 项目官网下载。
-<span id="os-span">对于您的操作系统</span>，您可以从以下链接下载 <span id="browser-span">Tor 浏览器</span>。</p>
+<span id="os-span">对于您的操作系统</span>，您可以从以下链接下载 <span id="browser-span">Tor 浏览器</span>：</p>
 
     
       <div id="download-tor-button">
@@ -889,7 +918,7 @@ GetTor 是一项能自动回复带有最新版本 Tor 浏览器链接的信息�
 <p>当您首次运行 Tor 浏览器时，您会看到连接到Tor网络窗口。
 这向您提供直接连接至 Tor 网络，或为您的连接配置 Tor 浏览器的选项。
 这个窗口中有复选框，可以让您选择是否在每次启动时自动连接 Tor 网络。</p>
-<p>理论上来说，当 Tor 浏览器启动后您应该可以直接开始浏览网页，若是首次启动的话只需要再点击“连接”按钮即可开始上网。</p>
+<p>首次使用 Tor 浏览器时，运行程序并点击“连接”，然后应该就可以浏览网站了。</p>
 
     
     
@@ -901,11 +930,11 @@ Tor 浏览器内置一些绕过这些封锁的规避工具。
 在这种情况下，只需将浏览器配置为通过网桥连接就足够了。
 网桥只是难以被屏蔽的私有中继。</p>
 <h3>关于如何激活桌面版网桥的说明：</h3>
-<p>你可以在 Tor 浏览器的桌面上使用一个网桥，方法是：设置 &gt; 连接 &gt; 网桥 &gt; 选择内置网桥。
+<p>你可以在 桌面端Tor 浏览器上使用一个网桥，方法是：设置 &gt; 连接 &gt; 网桥 &gt; 选择内置网桥。
 截至2021年12月22日，直接捆绑在 Tor 浏览器中的网桥在俄罗斯被屏蔽。</p>
 <p>因此，读者需要通过以下之一的途径来申请网桥：</p>
 <ul>
-<li>从桌面上的 Tor 浏览器中请求一个网桥：设置 &gt; 连接 &gt; 网桥 &gt; 从 torproject.org 请求一个网桥 &gt; 解开验证码</li>
+<li>从桌面上的 Tor 浏览器中请求一个网桥：设置 &gt; 连接 &gt; 网桥 &gt; 从 torproject.org 请求一个网桥 &gt; 输入验证码</li>
 <li>发送“/bridges”到专门的 Telegram 频道<a href="https://t.me/GetBridgesBot">@GetBridgesBot</a>，然后在 Tor 浏览器中通过复制和粘贴手动添加收到的网桥地址。设置 &gt; 连接 &gt; 网桥 &gt; 输入一个你已经知道的网桥地址</li>
 <li>请访问 <a href="https://bridges.torproject.org/，并按照指示操作">https://bridges.torproject.org/，并按照指示操作</a></li>
 <li>通过电子邮件申请网桥：bridges@torproject.org 从 Gmail 或 Riseup 电子邮箱地址；然后通过复制和粘贴在Tor浏览器中手动添加收到的网桥地址。设置 &gt; 连接 &gt; 网桥 &gt; 输入一个您已经知道的网桥地址</li>
@@ -926,7 +955,7 @@ Tor 浏览器内置一些绕过这些封锁的规避工具。
 <ul>
 <li>发送“/bridges”到专门的 Telegram 频道<a href="https://t.me/GetBridgesBot">@GetBridgesBot</a>，然后在 Tor 浏览器中通过复制和粘贴手动添加收到的网桥地址：网桥配置 &gt; 自定义网桥</li>
 <li>请访问 <a href="https://bridges.torproject.org/，并按照指示操作">https://bridges.torproject.org/，并按照指示操作</a></li>
-<li>通过电子邮件申请网桥：bridges@torproject.org 从 Gmail 或 Riseup 电子邮箱地址；然后通过复制和粘贴在Tor浏览器中手动添加收到的网桥地址。网桥配置 &gt; 自定义网桥</li>
+<li>通过电子邮件申请网桥：使用Gmail 或 Riseup 电子邮箱发送邮件到bridges@torproject.org ；然后通过复制和粘贴在Tor浏览器中手动添加收到的网桥地址：网桥配置 &gt; 自定义网桥</li>
 <li>从 Tor 浏览器内通过 Snowflake 连接：网桥配置 &gt; Snowflake</li>
 </ul>
 
@@ -947,8 +976,8 @@ Tor 浏览器内置一些绕过这些封锁的规避工具。
 <p>洋葱服务（旧称“隐身服务”）是一种只能透过 Tor 网络访问（像网站）的服务。
 就像任何其他网站一样，你需要知道洋葱服务的网址，以便连接到它。
 洋葱地址是一个主要由 56 位随机字母和数字组成的字符串，并以".onion"结尾。
-要了解有关洋葱服务的更多信息，请访问 [Tor 浏览器手册]（<a href="https://tb-manual.torproject.org/onion-services）。">https://tb-manual.torproject.org/onion-services）。</a></p>
-<p>要访问  Default Service Name 的洋葱服务，直接复制粘贴以下URL到Tor 浏览器:</p>
+要了解有关洋葱服务的更多信息，请访问 <a href="https://tb-manual.torproject.org/onion-services">Tor 浏览器手册</a>。</p>
+<p>要访问Default Service Name的洋葱服务，直接复制粘贴以下URL到Tor 浏览器:</p>
 
     
       <div class="onion-url"><a href="https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz2345.onion" class="onion-url-desktop onion-url-container" data-urlbg="#EA6903ff">
@@ -983,17 +1012,24 @@ Tor 浏览器内置一些绕过这些封锁的规避工具。
       <div class="social-button">
         <a href="https://t.me/TorProjectSupportBot" class="button"><img src="../telegram-brands.svg?h=fb54983f" class="rtl-hide">Telegram: @TorProjectSupportBot<img src="../telegram-brands.svg?h=fb54983f" class="rtl-show"></a>
       </div>
+
       <div class="social-button">
         <a href="https://signal.me/#p/+17787431312" class="button"><img src="../signal.svg?h=e6cdd02a" class="rtl-hide">Signal: +1 778-743-1312<img src="../signal.svg?h=e6cdd02a" class="rtl-show"></a>
       </div>
-      </div>
+
       <div class="social-button">
         <a href="https://forum.torproject.net/" class="button"><img src="../discourse-brands.svg?h=3587ce10" class="rtl-hide">Tor Project 论坛<img src="../discourse-brands.svg?h=3587ce10" class="rtl-show"></a>
       </div>
+
       <div class="social-button">
         <a href="mailto:frontdesk@torproject.org" class="button"><img src="../mail.svg?h=63bb0054" class="rtl-hide">frontdesk@torproject.org<img src="../mail.svg?h=63bb0054" class="rtl-show"></a>
       </div>
+
+      <div class="social-button">
+        <a href="https://wa.me/447421000612" class="button"><img src="../whatsapp.svg?h=c7bcbd36" class="rtl-hide">WhatsApp: +44 7421 000612<img src="../whatsapp.svg?h=c7bcbd36" class="rtl-show"></a>
+      </div>
     </div>
+  </div>
 </footer>
 
     

@@ -183,7 +183,7 @@
      }
      .onion-url-lock {
        transform: translateY(4px);
-       filter: invert(38%) sepia(65%) saturate(7500%) hue-rotate(29deg) brightness(102%) contrast(102%);
+       filter: invert(38%) sepia(65%) saturate(7492%) hue-rotate(28deg) brightness(102%) contrast(99%);
        display: inline-block;
        background-image: url(../onion-site-lock.svg?h=b66d07d8);
        width: 32px;
@@ -253,8 +253,11 @@
      #footer-container {
        margin: 0 auto;
        text-align: center;
-       width: 36vw;
        max-width: 1200px;
+     }
+     #footer-container p {
+       width: 36vw;
+       margin: auto;
      }
      #steps-container > div.parent:nth-child(2n) {
        flex-direction: row-reverse;
@@ -538,9 +541,14 @@
        background-size: contain;
        display: inline-block;
      }
+
      #social-button-container {
-       display: flex;
        justify-content: space-around;
+       margin-top: 40px;
+     }
+
+     #social-button-container div a {
+       margin: 10px;
      }
 
      #language-select {
@@ -624,7 +632,28 @@
        bottom: 0;
        padding: 1em;
        position: fixed;
-       background-color: #EA6903ff;;
+       background-color: #FCEDE1ff;;
+       margin: 2% auto;
+       width: 92vw;
+       border-radius: 13px;
+     }
+
+     .consent-banner a p {
+       margin-top: 15px;
+     }
+
+     .consent-buttons {
+       float: right;
+     }
+
+     #consent-ok {
+       margin-right: 20px;
+     }
+
+     #consent-cancel {
+       background-color: inherit;
+       box-shadow: inherit;
+       color: #CF5C00ff;;
      }
     </style>
     
@@ -808,13 +837,13 @@ This page details how you can circumvent the censorship.</p>
     <i class="onion-url-lock"></i>
     <span class="onion-url-span">https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz2345.onion</span>
     <span class="onion-url-span-uncopied">Copy the onion address</span>
-    <span class="onion-url-span-copied">Copied!</span>
+    <span class="onion-url-span-copied">ངོ་བཤུས་བརྒྱབ་ཟིན།</span>
   </a>
   <a href="https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz2345.onion" class="onion-url-mobile onion-url-container" data-urlbg="#EA6903ff">
     <i class="onion-url-lock"></i>
     <span class="onion-url-span">Visit the Default Service Name .onion site</span>
     <span class="onion-url-span-uncopied">Copy the onion address</span>
-    <span class="onion-url-span-copied">Copied!</span>
+    <span class="onion-url-span-copied">ངོ་བཤུས་བརྒྱབ་ཟིན།</span>
   </a>
 </div>
           </div>
@@ -955,13 +984,13 @@ To learn more about Onion Services, visit the <a href="https://tb-manual.torproj
     <i class="onion-url-lock"></i>
     <span class="onion-url-span">https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz2345.onion</span>
     <span class="onion-url-span-uncopied">Copy the onion address</span>
-    <span class="onion-url-span-copied">Copied!</span>
+    <span class="onion-url-span-copied">ངོ་བཤུས་བརྒྱབ་ཟིན།</span>
   </a>
   <a href="https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz2345.onion" class="onion-url-mobile onion-url-container" data-urlbg="#EA6903ff">
     <i class="onion-url-lock"></i>
     <span class="onion-url-span">Visit the Default Service Name .onion site</span>
     <span class="onion-url-span-uncopied">Copy the onion address</span>
-    <span class="onion-url-span-copied">Copied!</span>
+    <span class="onion-url-span-copied">ངོ་བཤུས་བརྒྱབ་ཟིན།</span>
   </a>
 </div>
     
@@ -983,17 +1012,24 @@ To learn more about Onion Services, visit the <a href="https://tb-manual.torproj
       <div class="social-button">
         <a href="https://t.me/TorProjectSupportBot" class="button"><img src="../telegram-brands.svg?h=fb54983f" class="rtl-hide">Telegram: @TorProjectSupportBot<img src="../telegram-brands.svg?h=fb54983f" class="rtl-show"></a>
       </div>
+
       <div class="social-button">
         <a href="https://signal.me/#p/+17787431312" class="button"><img src="../signal.svg?h=e6cdd02a" class="rtl-hide">Signal: +1 778-743-1312<img src="../signal.svg?h=e6cdd02a" class="rtl-show"></a>
       </div>
-      </div>
+
       <div class="social-button">
         <a href="https://forum.torproject.net/" class="button"><img src="../discourse-brands.svg?h=3587ce10" class="rtl-hide">Tor Project forum<img src="../discourse-brands.svg?h=3587ce10" class="rtl-show"></a>
       </div>
+
       <div class="social-button">
         <a href="mailto:frontdesk@torproject.org" class="button"><img src="../mail.svg?h=63bb0054" class="rtl-hide">frontdesk@torproject.org<img src="../mail.svg?h=63bb0054" class="rtl-show"></a>
       </div>
+
+      <div class="social-button">
+        <a href="https://wa.me/447421000612" class="button"><img src="../whatsapp.svg?h=c7bcbd36" class="rtl-hide">WhatsApp: +44 7421 000612<img src="../whatsapp.svg?h=c7bcbd36" class="rtl-show"></a>
+      </div>
     </div>
+  </div>
 </footer>
 
     

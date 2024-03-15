@@ -183,7 +183,7 @@
      }
      .onion-url-lock {
        transform: translateY(4px);
-       filter: invert(38%) sepia(65%) saturate(7500%) hue-rotate(29deg) brightness(102%) contrast(102%);
+       filter: invert(38%) sepia(65%) saturate(7492%) hue-rotate(28deg) brightness(102%) contrast(99%);
        display: inline-block;
        background-image: url(../onion-site-lock.svg?h=b66d07d8);
        width: 32px;
@@ -253,8 +253,11 @@
      #footer-container {
        margin: 0 auto;
        text-align: center;
-       width: 36vw;
        max-width: 1200px;
+     }
+     #footer-container p {
+       width: 36vw;
+       margin: auto;
      }
      #steps-container > div.parent:nth-child(2n) {
        flex-direction: row-reverse;
@@ -538,9 +541,14 @@
        background-size: contain;
        display: inline-block;
      }
+
      #social-button-container {
-       display: flex;
        justify-content: space-around;
+       margin-top: 40px;
+     }
+
+     #social-button-container div a {
+       margin: 10px;
      }
 
      #language-select {
@@ -624,7 +632,28 @@
        bottom: 0;
        padding: 1em;
        position: fixed;
-       background-color: #EA6903ff;;
+       background-color: #FCEDE1ff;;
+       margin: 2% auto;
+       width: 92vw;
+       border-radius: 13px;
+     }
+
+     .consent-banner a p {
+       margin-top: 15px;
+     }
+
+     .consent-buttons {
+       float: right;
+     }
+
+     #consent-ok {
+       margin-right: 20px;
+     }
+
+     #consent-cancel {
+       background-color: inherit;
+       box-shadow: inherit;
+       color: #CF5C00ff;;
      }
     </style>
     
@@ -800,7 +829,7 @@
           <div class="child" id="site-intro">
             <h1>Conseils pour Contourner Blocage de Default Service Name</h1>
             <div id="site-description">
-              <p>Incapable d'accèder à <a href="https://service-url.website/">service-url.website</a>?
+              <p>Incapable d'accèder à <a href="https://service-url.website/">service-url.website</a> ?
 Cette page détaille comment contourner la censure.</p>
 
             </div>
@@ -828,7 +857,7 @@ Cette page détaille comment contourner la censure.</p>
         <h2>Contourner la censure avec Tor</h2>
         <p>Tor fourni une façon de naviguer l'internet anonymement, en aidant <strong>éviter à la fois la censure et la surveillance</strong>. Le Navigateur Tor est similaire à d'autre naviguateurs que vous utilisez - Chrome, Firefox, Safari, Yandex - à l'exception qu'au lieu d'exposer votre comportement de naviguation à votre fournisseur d’accès à Internet et tous les autres espionnant votre trafic, il <strong>cache votre trafic</strong> en l'encryptant et le laissant traverser par trois noeud aléatoire volontaire (ces noeuds sont aussi appelé "relais"). Ce procédé camoufle qui vous êtes, où vous êtes, et où vous allez (c.-à-d. quel site Web vous visitez).</p>
 
-        <p>Tor est utilisé par des défenseurs des droits des personnes, activistes, et autres personnes de partout dans le monde qui ont besoin d' "échapper à la censure et la surveillance". Pour en apprendre plus à propos de Tor et son fonctionnement, visitez le <a href="https://tb-manual.torproject.org/fr/">guide d'utilisation du Navigateur Tor</a>.</p>
+        <p>Tor est utilisé par des défenseurs des droits des personnes, activistes, et autres personnes de partout dans le monde qui ont besoin d' <strong>échapper à la censure et la surveillance</strong>. Pour en apprendre plus à propos de Tor et son fonctionnement, visitez le <a href="https://tb-manual.torproject.org/fr/">guide d'utilisation du Navigateur Tor</a>.</p>
 
       </div>
       <div id="steps-container">
@@ -836,7 +865,7 @@ Cette page détaille comment contourner la censure.</p>
   <div class="child step-text">
     <h2>Étape 1 : Télécharger le Navigateur Tor</h2>
     <p>La manière le plus sûr et simple de télécharger le Navigateur Tor est depuis le site Web officiel du Projet Tor.
-<span id="os-span">Pour votre système d'exploitation</span>, vous pouvez télécharger le <span id="browser-span">Navigateur Tor</span> du lien ci-dessous:</p>
+<span id="os-span">Pour votre système d'exploitation</span>, vous pouvez télécharger <span id="browser-span">le navigateur Tor</span> à partir du lien ci-dessous :</p>
 
     
       <div id="download-tor-button">
@@ -858,15 +887,17 @@ Si cela se produit, vous pouvez utiliser l’une des méthodes de téléchargeme
 <h3>GetTor</h3>
 <p>Si les sites miroir sont aussi bloqués, vous pouvez faire une requête pour recevoir le Navigateur Tor depuis GetTor.
 GetTor est un service qui répond automatiquement aux messages en incluant des liens vers la dernière version du Navigateur Tor, hébergée en divers endroits tels que les services nuagiques Dropbox et disque Google Drive, ou sur GitHub :</p>
-<p>GetTor- <strong>Étape 1</strong>: Envoyez un courriel à gettor@torproject.org, et dans le corps du message écrivez simplement “windows”, “osx”, ou “linux”, (sans les apostrophes) selon votre système d'exploitation. Vous pouvez également ajouter un code de langue pour obtenir le Navigateur Tor dans une langue différente de l'anglais. Par exemple, pour obtenir le lien de téléchargement du Navigateur Tor en Chinois (Chine) pour Windows, envoyez un courriel à gettor@torproject.org avec les mots "windows zh_CN" inclus.</p>
 <ul>
-<li><strong>Étape 2</strong>: GetTor va répondre avec un courriel contenant les liens de téléchargement du paquet d'installation du Navigateur Tor, la signature cryptographique (requise pour vérifier le téléchargement), l'empreinte de la clé utilisé pour signer, et la somme de contrôle du paquet. Vous serez peut-être offert le logiciel en version “32-bit” ou “64-bit”: en fonction du modèle d'ordinateur que vous utilisez.</li>
+<li><p><strong>Étape 1</strong> : Envoyez un courriel à gettor@torproject.org, et dans le corps du message écrivez simplement “windows”, “osx”, ou “linux”, (sans les apostrophes) selon votre système d'exploitation. Vous pouvez également ajouter un code de langue pour obtenir le Navigateur Tor dans une langue différente de l'anglais. Par exemple, pour obtenir le lien de téléchargement du Navigateur Tor en Chinois (Chine) pour Windows, envoyez un courriel à gettor@torproject.org avec les mots "windows zh_CN" inclus.</p>
+</li>
+<li><p><strong>Étape 2</strong> : GetTor va répondre avec un courriel contenant les liens de téléchargement du paquet d'installation du Navigateur Tor, la signature cryptographique (requise pour vérifier le téléchargement), l'empreinte de la clé utilisé pour signer, et la somme de contrôle du paquet. Vous serez peut-être offert le logiciel en version “32-bit” ou “64-bit” : en fonction du modèle d'ordinateur que vous utilisez.</p>
+</li>
 </ul>
 <p>Vous pouvez également accèder la documentation et autres ressources en utilisant les mirroirs suivant:</p>
 <ul>
 <li><a href="https://support.tor.invidious.site/">Portail d’assistance</a></li>
 <li><a href="https://tb-manual.tor.invidious.site/fr/">Guide d’utilisation du Navigateur Tor</a></li>
-<li><a href="https://blog.tor.invidious.site/">Blogue du Projet Tor</a></li>
+<li><a href="https://blog.tor.invidious.site/">Blog du Projet Tor</a></li>
 <li><a href="https://tor.invidious.site/">Site Web principal Tor</a></li>
 </ul>
 
@@ -883,7 +914,7 @@ GetTor est un service qui répond automatiquement aux messages en incluant des l
 <div id="step2" class="parent">
   <div class="child step-text">
     <h2></h2>
-    <h2>Étape 2: Se connecter à Tor</h2>
+    <h2>Étape 2 : Se connecter à Tor</h2>
 <p>Quand vous lancez le Navigateur Tor pour la première fois, vous verrez Se Connecter à Tor apparaître sur votre fenêtre.
 Cela vous offre l’option soit de vous connecter directement au réseau Tor, soit de configurer le Navigateur Tor pour votre connexion.
 Il y a une case qui demande si vous voulez vous connecter automatiquement au réseau Tor, si c’est le cas, cochez la case.</p>
@@ -898,34 +929,34 @@ Il y a une case qui demande si vous voulez vous connecter automatiquement au ré
 Le Navigateur Tor inclu des outils de contournement pour contourner ces barrages.
 Dans de tel scénario, simplement configurer votre naviguateur pour se connecter via un pont devrait suffir.
 Les Ponts sont de simple relais qui sont privé et plus difficile à bloquer.</p>
-<h3>Instructions pour activer les ponts pour ordinateur:</h3>
-<p>Vous pouvez utiliser un pont dans le Navigateur Tor sur ordinateur en allant dans : Paramètres &gt; Connexion &gt; Ponts &gt; Sélectionner un pont intégré.
+<h3>Instructions pour activer les ponts pour ordinateur :</h3>
+<p>Vous pouvez utiliser un pont dans le navigateur Tor pour ordinateur de bureau en allant dans : Paramètres &gt; Connexion &gt; Ponts &gt; Sélectionner un pont intégré.
 Depuis le 22 décembre 2021, les ponts inclus directement dans le Navigateur Tor sont bloqué en Russie.</p>
 <p>Les lecteurs doivent donc demander un pont par l'un des moyens suivants:</p>
 <ul>
-<li>Demander un pont depuis le Navigateur Tor sur ordinateur : Paramètres &gt; Connexion &gt; Ponts &gt; Demander un pont à torproject.org &gt; Résolvez le CAPTCHA</li>
-<li>Sending "/bridges" to the dedicated Telegram channel <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> and then adding the bridge address received manually via copy and paste in Tor Browser: Settings &gt; Connection &gt; Bridges &gt; Enter a bridge address you already know</li>
+<li>Demander un pont depuis le navigateur Tor sur le bureau : Paramètres &gt; Connexion &gt; Ponts &gt; Demander un pont depuis torproject.org &gt; Résoudre le CAPTCHA</li>
+<li>Envoyer "/bridges" sur le canal Telegram dédié <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> puis ajouter l'adresse du pont reçue manuellement en copiant et collant dans le navigateur Tor : Paramètres &gt; Connexion &gt; Ponts &gt; Entrer une adresse de pont que vous connaissez déjà</li>
 <li>Visitez <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> et suivre les instructions</li>
-<li>Demander un pont par courriel : bridges@torproject.org depuis une adresse courriel Gmail ou RIseup; puis ajouter l'adresse du pont manuellement à l'aide d'un copier-coller dans le Navigateur Tor : Paramètres &gt; Connexion &gt; Ponts &gt; Saisir une adresse de pont que vous connaissez déjà</li>
-<li>Se connecter via Snowflake depuis le Navigateur Tor: Paramètres &gt; Connexion &gt; Ponts &gt; Sélectionner un pont intégré &gt; Snowflake</li>
+<li>Demander un pont par mail : bridges@torproject.org à partir d'une adresse mail Gmail ou Riseup ; puis ajouter l'adresse du pont manuellement en faisant un copier-coller dans le navigateur Tor : Paramètres &gt; Connexion &gt; Ponts &gt; Entrer une adresse de pont que vous connaissez déjà</li>
+<li>Connexion via Snowflake depuis le navigateur Tor : Paramètres &gt; Connexion &gt; ponts &gt; Sélectionner un pont intégré &gt; Snowflake</li>
 </ul>
-<h3>Instructions pour activer les ponts pour Android:</h3>
-<p>Readers can use a bridge on Android by going to: Settings icon &gt; Config Bridge &gt; Use a bridge.</p>
-<p>In the case that bridges bundled directly into Tor Browser are blocked, readers need to request a bridge via one of the following ways:</p>
+<h3>Instructions pour activer les ponts pour Android :</h3>
+<p>Les utilisateurs peuvent utiliser un pont sur Android en allant dans : Icône Paramètres &gt; Configuration du pont &gt; Utiliser un pont.</p>
+<p>Dans le cas où les ponts intégrés directement dans le navigateur Tor sont bloqués, les utilisateurs doivent demander un pont de l'une des manières suivantes :</p>
 <ul>
-<li>Sending "/bridges" to the dedicated Telegram channel <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> and then adding the bridges lines received manually via copy and paste in Tor Browser: Config Bridge &gt; Provide a bridge I know</li>
+<li>Envoyer "/bridges" sur le canal Telegram dédié <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> puis ajouter les lignes de ponts reçues manuellement en les copiant et les collant dans le navigateur Tor : Configuration du pont &gt; Fournir un pont que je connais</li>
 <li>Visitez <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> et suivre les instructions</li>
-<li>Requesting a bridge via email: bridges@torproject.org from a Gmail or Riseup email address; and then adding the bridges lines received manually via copy and paste in Tor Browser: Config Bridge &gt; Provide a bridge I know</li>
-<li>Connecting through Snowflake from within Tor Browser: Config Bridge &gt; Snowflake</li>
-</ul>
-<h3>Instructions pour activer les ponts pour iOS:</h3>
-<p>Readers can use a bridge on iOS by going to: Onion icon when viewing a website &gt; Bridge Configuration.</p>
-<p>In the case that bridges bundled directly into Tor Browser are blocked, you can request a bridge via one of the following ways:</p>
-<ul>
-<li>Sending "/bridges" to the dedicated Telegram channel <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> and then adding the bridges lines received manually via copy and paste in Tor Browser: Bridge Configuration &gt; Custom Bridges</li>
-<li>Visitez <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> et suivre les instructions</li>
-<li>Requesting a bridge via email: bridges@torproject.org from a Gmail or Riseup email address; and then adding the bridges lines received manually via copy and paste in Tor Browser: Bridge Configuration &gt; Custom Bridges</li>
+<li>Demander un pont par mail : bridges@torproject.org à partir d'une adresse email Gmail ou Riseup ; puis ajouter les lignes de ponts reçues manuellement par copier-coller dans le navigateur Tor : Configuration du pont &gt; Fournir un pont que je connais</li>
 <li>Se connecter via Snowflake depuis le Navigateur Tor : Configuration de pont &gt; Snowflake</li>
+</ul>
+<h3>Instructions pour activer les ponts pour iOS :</h3>
+<p>Les utilisateurs peuvent utiliser un pont sur iOS en se rendant sur l'icône de l'onion lors de la consultation d'un site web &gt; Configuration du pont : Icône onion lors de la consultation d'un site web &gt; Configuration des ponts.</p>
+<p>Dans le cas où les ponts intégrés directement dans le navigateur Tor sont bloqués, vous pouvez demander un pont de l'une des manières suivantes :</p>
+<ul>
+<li>Envoyer "/bridges" au canal Telegram dédié <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> puis ajouter les lignes de ponts reçues manuellement en copiant et collant dans le navigateur Tor : Configuration des ponts &gt; Ponts personnalisés</li>
+<li>Visitez <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> et suivre les instructions</li>
+<li>Demander un pont par mail : bridges@torproject.org à partir d'une adresse email Gmail ou Riseup ; puis ajouter les lignes de ponts reçues manuellement par copier-coller dans le navigateur Tor : Configuration des passerelles &gt; Ponts personnalisés</li>
+<li>Connexion via Snowflake depuis le navigateur Tor : Configuration du pont &gt; Snowflake</li>
 </ul>
 
         </div>
@@ -941,12 +972,12 @@ Depuis le 22 décembre 2021, les ponts inclus directement dans le Navigateur To
 <div id="step3" class="parent">
   <div class="child step-text">
     <h2></h2>
-    <h2>Étape 3: Accès au service oignon</h2>
+    <h2>Étape 3 : Accès au service oignon</h2>
 <p>Les services oignon (anciennement « services cachés ») sont des services (tels que des sites Web) qui ne sont accessibles que par le réseau Tor.
 Comme n'importe quel site Web, vous aurez besoin de connaitre l'adresse d'un service oignon afin de vous vous y connecter.
 Une adresse oignon est une chaîne de 56 caractères principalement des lettres et chiffres aléatoires, suivi par "oignon".
-To learn more about Onion Services, visit the <a href="https://tb-manual.torproject.org/onion-services">Tor Browser Manual</a>.</p>
-<p>To access Default Service Name's onion service, simply copy and paste the following URL onto Tor Browser:</p>
+Pour en savoir plus sur les services en onion, consultez le <a href="https://tb-manual.torproject.org/onion-services">Manuel du navigateur Tor</a>.</p>
+<p>Pour accéder au service en onion de Default Service Name, il suffit de copier et de coller l'URL suivante dans le navigateur Tor :</p>
 
     
       <div class="onion-url"><a href="https://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz2345.onion" class="onion-url-desktop onion-url-container" data-urlbg="#EA6903ff">
@@ -981,17 +1012,24 @@ To learn more about Onion Services, visit the <a href="https://tb-manual.torproj
       <div class="social-button">
         <a href="https://t.me/TorProjectSupportBot" class="button"><img src="../telegram-brands.svg?h=fb54983f" class="rtl-hide">Telegram: @TorProjectSupportBot<img src="../telegram-brands.svg?h=fb54983f" class="rtl-show"></a>
       </div>
+
       <div class="social-button">
         <a href="https://signal.me/#p/+17787431312" class="button"><img src="../signal.svg?h=e6cdd02a" class="rtl-hide">Signal: +1 778-743-1312<img src="../signal.svg?h=e6cdd02a" class="rtl-show"></a>
       </div>
-      </div>
+
       <div class="social-button">
-        <a href="https://forum.torproject.net/" class="button"><img src="../discourse-brands.svg?h=3587ce10" class="rtl-hide">Forum du Projet Tor<img src="../discourse-brands.svg?h=3587ce10" class="rtl-show"></a>
+        <a href="https://forum.torproject.net/" class="button"><img src="../discourse-brands.svg?h=3587ce10" class="rtl-hide">Forum du Projet Tor<img src="../discourse-brands.svg?h=3587ce10" class="rtl-show"></a>
       </div>
+
       <div class="social-button">
         <a href="mailto:frontdesk@torproject.org" class="button"><img src="../mail.svg?h=63bb0054" class="rtl-hide">frontdesk@torproject.org<img src="../mail.svg?h=63bb0054" class="rtl-show"></a>
       </div>
+
+      <div class="social-button">
+        <a href="https://wa.me/447421000612" class="button"><img src="../whatsapp.svg?h=c7bcbd36" class="rtl-hide">WhatsApp: +44 7421 000612<img src="../whatsapp.svg?h=c7bcbd36" class="rtl-show"></a>
+      </div>
     </div>
+  </div>
 </footer>
 
     
